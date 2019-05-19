@@ -1,4 +1,4 @@
-var canvas = document.getElementById("screen");
+var canvas = document.getElementById("game-surface");
 var context = canvas.getContext("webgl");
 
 var x = 20, y = 20;
