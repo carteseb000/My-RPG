@@ -1,5 +1,5 @@
 var canvas = document.getElementById("game-surface");
-var context = canvas.getContext("webgl");
+var context = canvas.getContext("2d");
 
 var x = 20, y = 20;
 
