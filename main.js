@@ -1,5 +1,5 @@
 var canvas = document.getElementById("screen");
-var context = canvas.getContext("2d");
+var context = canvas.getContext("webgl");
 
 var x = 20, y = 20;
 
