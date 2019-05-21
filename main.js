@@ -1,37 +1,15 @@
-var canvas = document.getElementById("game-surface");
-var context = canvas.getContext("2d");
+var Player = function(x,y,size,speed) {
+  this.x = x;
+  this.y = y;
+  this.size = size; 
+  this.speed = speed;
+   this.update = function() {
+      ellipse(this.x,this.y,this.size,this.size);
+   };
+};
 
-var x = 20, y = 20;
+var player = new Player(100,100,9,3);
 
-function init(){
-   context.fillStyle = "yellow";
-}
-
-function move(dx, dy) {
-   x += dx;
-   y += dy;
-}
-
-function update() {
-   if(key.a) {move(-5, 0);}
-   if(key.d) {move(5 , 0);}
-   if(key.w) {move(0, -5);}
-   if(key.s) {move(0 , 5);}
-}
-
-function draw() {
-   context.clearRect(0, 0, canvas.width, canvas.height);
-   context.fillRect(x, y, 20, 20);
-}
-
-function main() {
-   update();
-   draw();
-}
-
-window.onload = function() {
-   init();
-   setInterval(main,  1000 / 60);
-}
-
-
+draw = function() {
+   player.update();
+};
