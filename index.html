@@ -1,8 +1,11 @@
 <html>
   <head>
     <title>BrowsRPG</title>
+    <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+    <script src="https://unpkg.com/blockly/javascript_compressed"></script>
+    <script src="main.js"></script>
   </head>
-  <body mode="maker">
+  <body onload="start()">
       <!-- Toolbox Definition -->
   <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox-categories" style="display: none">
     <category name="Logic" categorystyle="logic_category">
@@ -352,9 +355,6 @@
         <div id="blocklyDiv" style="height: 480px; width: 400px;"></div>
       </div>
     </main>
-    <script src="https://unpkg.com/blockly/blockly.min.js"></script>
-    <script src="https://unpkg.com/blockly/javascript_compressed"></script>
     <script src="keys.js"></script>
-    <script src="main.js"></script>
   </body>
 </html>
