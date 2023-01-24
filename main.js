@@ -1,26 +1,14 @@
-const toolbox = {
-  'kind': 'flyoutToolbox',
-  'contents': [
+'use strict';
+
+let workspace = null;
+
+function start() {
+  // Create main workspace.
+  workspace = Blockly.inject('blocklyDiv',
     {
-      'kind': 'block',
-      'type': 'controls_repeat_ext',
-      'inputs': {
-        'TIMES': {
-          'shadow': {
-            'type': 'math_number',
-            'fields': {
-              'NUM': 5
-            }
-          }
-        }
-      }
-    }
-  ]
+      toolbox: document.getElementById('toolbox-categories'),
+    });
 }
-Blockly.inject('blocklyDiv', {
-  toolbox: toolbox,
-  scrollbars: false
-})
 
 //var Player = function(x,y,size,speed) {
   //this.x = x;
